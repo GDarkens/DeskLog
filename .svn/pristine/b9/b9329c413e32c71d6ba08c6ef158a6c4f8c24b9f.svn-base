@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb7a4627-c62a-4b90-ac32-a9fe2e1f36be" name="Default Changelist" comment="changed code to resize. Not applied to any image at the moment">
+      <change afterPath="$PROJECT_DIR$/src/GUI/images/grapefruit-slice-332-332.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/FrameRate1" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/BottomPanel$recordScreenshots.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/BottomPanel$recordScreenshots.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/BottomPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/Frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/MiddlePanel$event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/MiddlePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/ResList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/TopPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/files" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/GUI/images" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/Screenshot/ResizeResolutionImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/Screenshot/imageManipulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/Screenshot/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CE320-07 Project/Screenshot/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CE320-07 Project/VideoCreator" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/out/test" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/src/FrameRate1/Compression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrameRate1/Compression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/BottomPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BottomPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/images/pexels-photo-414612.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/images/pexels-photo-414612.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screenshot/ResizeResolutionImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screenshot/ResizeResolutionImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screenshot/imageManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screenshot/imageManipulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screenshot/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screenshot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoCreator/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoCreator/Main.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="247" />
+    <option name="y" value="248" />
+    <option name="width" value="1936" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectId" id="1T9gqw1HsTgorCaJKfFUmAWsE5l" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GUI/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\CE320_group07\trunk\CE320-07 Project\src\GUI\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ResizeResolutionImage">
+    <configuration default="true" type="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screenshot.Main" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Main" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResizeResolutionImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screenshot.ResizeResolutionImage" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VideoCreator.main" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VideoCreator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CE320-07 Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.JUnitTesting" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.main" />
+      <item itemvalue="JUnit.JUnitTesting" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.ResizeResolutionImage" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ResizeResolutionImage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.JUnitTesting" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\bo17860\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="M:\CE320_group07\trunk\CE320-07 Project" />
+          <option name="myCopyRoot" value="M:\CE320_group07\trunk\CE320-07 Project" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="M:\CE320_group07\trunk\CE320-07 Project" />
+          <option name="myCopyRoot" value="M:\CE320_group07\trunk\CE320-07 Project" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb7a4627-c62a-4b90-ac32-a9fe2e1f36be" name="Default Changelist" comment="" />
+      <created>1572877919113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572877919113</updated>
+      <workItem from="1572877920277" duration="6000" />
+      <workItem from="1572960484278" duration="38000" />
+      <workItem from="1573089500447" duration="18000" />
+      <workItem from="1573144710923" duration="846000" />
+      <workItem from="1573478208289" duration="168000" />
+      <workItem from="1573478398715" duration="1816000" />
+      <workItem from="1573482489410" duration="348000" />
+      <workItem from="1573484305516" duration="3156000" />
+      <workItem from="1573489640656" duration="289000" />
+      <workItem from="1573565820559" duration="47000" />
+      <workItem from="1573565905266" duration="2219000" />
+      <workItem from="1573737612246" duration="4641000" />
+      <workItem from="1573828779614" duration="4567000" />
+      <workItem from="1573833474690" duration="205000" />
+      <workItem from="1573833803422" duration="92000" />
+      <workItem from="1573833933481" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bug whenever I am calling the resize function in ResizeResolutionImage class" />
+    <MESSAGE value="changed code to resize. Not applied to any image at the moment" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed code to resize. Not applied to any image at the moment" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CE320-07 Project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jcodec-0.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

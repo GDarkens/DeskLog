@@ -1,0 +1,96 @@
+package Screenshot;
+import GUI.MiddlePanel;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLOutput;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static java.lang.System.exit;
+import static javax.imageio.ImageIO.read;
+
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        //A portion of this code will be changed when we link together other modules for iteration 1
+        takeAndSaveScreenshot();
+
+    }
+
+    final static String SCREENSHOT_SAVE_LOCATION = ".//SavedScreenshots//";
+    final static Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy.MM.dd'_'HH.mm.ss");
+    public static String fileNameLocation;
+
+
+    public static void takeAndSaveScreenshot() {
+        Date currentDate = new Date();
+        try {
+            Robot screenshotRobot = new Robot();
+            BufferedImage screenshot = screenshotRobot.createScreenCapture(new Rectangle(SCREEN_SIZE));
+
+            //Check if the directory exists, if not create it
+            File directory = new File(SCREENSHOT_SAVE_LOCATION);
+            if (!directory.exists()) {
+                directory.mkdir();
+            }
+
+            fileNameLocation = SCREENSHOT_SAVE_LOCATION + dateFormatter.format(currentDate) + ".jpg";
+
+            ImageIO.write(screenshot, "JPG", new File(SCREENSHOT_SAVE_LOCATION +
+                    dateFormatter.format(currentDate) +
+                    ".jpg"));
+
+
+        } catch (AWTException | IOException e) {
+            System.out.println("Failed to take and save screenshot \n" +
+                    "Stack trace: " + e);
+        }
+
+        //Pass screenshot to timestamping module
+        try {
+            imageManipulation.timestamp(new File(fileNameLocation), new Font("Arial Black", Font.BOLD, 30), SCREENSHOT_SAVE_LOCATION);
+        } catch (IOException e) {
+            System.out.println("Failed to timestamp screenshot \n" +
+                    "Stack trace:" + e);
+        }
+        try {
+
+            ResizeResolutionImage resizedImage = new ResizeResolutionImage();
+            MiddlePanel panel = new MiddlePanel();
+            String selected = panel.selectedResolution;
+            BufferedImage selectedScreenshot = read(new File(fileNameLocation));
+            int width, height;
+            String[] widthHeight;
+            boolean done_resize = false;
+
+
+            if (selected != null) {
+                for (int i = 0; i < selected.length(); i++) {
+                    widthHeight = selected.split("\\*");
+                    width = Integer.parseInt(widthHeight[0]);
+                    height = Integer.parseInt(widthHeight[1].replaceAll("[\\s|p]", ""));
+                    ImageIcon s = new ImageIcon(resizedImage.resizeImage(selectedScreenshot, fileNameLocation, width, height));
+                    done_resize = true;
+                    JOptionPane.showMessageDialog(null, null, "Resized screenshot image", JOptionPane.INFORMATION_MESSAGE, s);
+                    selected = null;
+                }
+
+            }else {
+                JOptionPane.showMessageDialog(null, "NO resolution has been selected", "WARNING", JOptionPane.INFORMATION_MESSAGE, null);
+            }
+
+        }catch(IOException e){
+                System.out.println(e.getMessage() + "\nFailed to resize the image");
+            }
+        }
+    }
+
+
+
+
+

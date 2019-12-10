@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="145e7654-650f-4cbb-bf42-e9b75d9db376" name="Default Changelist" comment="Driver: mh16455 Navigator: gd17301&#10;Ticket #77&#10;Add FileBrowser which allows you to open exported videos&#10;Add an option to BottomPanel to open VideoTracker">
+      <change beforePath="$PROJECT_DIR$/.idea/CE320-07 Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CE320-07 Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoLogTracker/Tracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoLogTracker/Tracker.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1T9gqw1HsTgorCaJKfFUmAWsE5l" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="144" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="144" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="M:\CE320_group07\trunk\CE320-07 Project\src\GUI\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\CE320_group07\trunk\CE320-07 Project\src\GUI\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Tracker">
+    <configuration default="true" type="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileBrowser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.FileBrowser" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VideoCreator.Main" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VideoCreator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Main" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScreenshotMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screenshot.ScreenshotMain" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VideoLogTracker.Tracker" />
+      <module name="CE320-07 Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VideoLogTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ScreenshotMain" />
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.FileBrowser" />
+      <item itemvalue="Application.Tracker" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Tracker" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.FileBrowser" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.ScreenshotMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="145e7654-650f-4cbb-bf42-e9b75d9db376" name="Default Changelist" comment="" />
+      <created>1572877919113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572877919113</updated>
+      <workItem from="1572877920277" duration="6000" />
+      <workItem from="1572960484278" duration="38000" />
+      <workItem from="1573089500447" duration="18000" />
+      <workItem from="1573144710923" duration="846000" />
+      <workItem from="1573478208289" duration="168000" />
+      <workItem from="1573478398715" duration="1816000" />
+      <workItem from="1573482489410" duration="348000" />
+      <workItem from="1573484305516" duration="3156000" />
+      <workItem from="1573489640656" duration="289000" />
+      <workItem from="1573565820559" duration="47000" />
+      <workItem from="1573565905266" duration="2219000" />
+      <workItem from="1573737612246" duration="4641000" />
+      <workItem from="1573828779614" duration="4567000" />
+      <workItem from="1573833474690" duration="205000" />
+      <workItem from="1573833803422" duration="92000" />
+      <workItem from="1573833933481" duration="16000" />
+      <workItem from="1573904986161" duration="9000" />
+      <workItem from="1573905112054" duration="5925000" />
+      <workItem from="1573920929527" duration="9601000" />
+      <workItem from="1574776045712" duration="38000" />
+      <workItem from="1574776185844" duration="996000" />
+      <workItem from="1575285056302" duration="8145000" />
+      <workItem from="1575295052657" duration="7124000" />
+      <workItem from="1575731719493" duration="5559000" />
+      <workItem from="1575895005602" duration="3072000" />
+    </task>
+    <task id="LOCAL-00001" summary="changed code to resize. Not applied to any image at the moment">
+      <created>1573838655263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573838655263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="resize method working. It changes the size of the image and stores it into the same folder (overwrite the original screenshot image)&#10;Driver: bo17860  Navigator:bo17860">
+      <created>1573926531151</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573926531151</updated>
+    </task>
+    <task id="LOCAL-00003" summary="the code actually changes the resolution and retrieves the values from the selected dropdown in the GUI, but it is not merged with the actual GUI package. It does not work when run the frame&#10;&#10;-bo17860">
+      <created>1573931025274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573931025274</updated>
+    </task>
+    <task id="LOCAL-00004" summary="the code actually changes the resolution and retrieves the values from the selected dropdown in the GUI, but it is not merged with the actual GUI package. It does not work when run the frame&#10;&#10;-bo17860">
+      <created>1573931062873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573931062873</updated>
+    </task>
+    <task id="LOCAL-00005" summary="the code actually changes the resolution and retrieves the values from the selected dropdown in the GUI, but it is not merged with the actual GUI package. It does not work when run the frame&#10;&#10;-bo17860">
+      <created>1573931137514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573931137514</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changed couple variables names">
+      <created>1575285589812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575285589812</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add image analysis folder">
+      <created>1575287975377</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575287975377</updated>
+    </task>
+    <task id="LOCAL-00008" summary="implemented created text log function. it will create and write the video log information. The text file will be saved in a folder called TextLogDirectory&#10;&#10;&#10;driver: bo17860 navigator: ifolor">
+      <created>1575292915899</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575292915899</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added createContent function: this function should get the text content for each text log file&#10;&#10;driver: bo17860 navigator: ifolor">
+      <created>1575297435026</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575297435026</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed scope of returnOpenWindows(), from private to protected; It would allow TextLog class to use the function&#10;driver: bo17860 navigator: ifolor">
+      <created>1575302790601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575302790601</updated>
+    </task>
+    <task id="LOCAL-00011" summary="createContent function changed to print out the content of the windowlog&#10;driver: bo17860 navigator: ifolor">
+      <created>1575378831332</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575378831332</updated>
+    </task>
+    <task id="LOCAL-00012" summary="completed createContent function, which will orint out the applications running at the current time, the name of the videoLog and the time spent.&#10;The name of the videoLog is hard coded, It should take the name of the video just exported.&#10;&#10;driver: bo17860 navigator: ifolor">
+      <created>1575382820752</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575382820752</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Pushed code (again, since it was reverted) for creating an image from a text input. In addition to some code in ScreenshotMain for getting the dissimilarity threshold from the current screenshot and the previous one. &#10;This work is under ticket #46.">
+      <created>1575391086811</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1575391086811</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Code for displaying a message in the video upon changing the application is almost done. There is an error however in ScreenshotMain when trying to get the dissimilarity of 2 images.&#10;This work is under ticket #46.">
+      <created>1575429531840</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1575429531840</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Navigator: mh16455 Driver: gd17301&#10;Add commons-lang3-3.9.jar library&#10;recommit some work from previous commit 193 due to ka16693 deleting other peoples work">
+      <created>1575648856034</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1575648856034</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Navigator: mh16455 Driver: gd17301&#10;Add json Library&#10;Add Tracker back to BottomPanel to track video export locations">
+      <created>1575649344030</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575649344030</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Navigator: mh16455 Driver: gd17301&#10;Fix playbackDelete panel not showing up after first recording&#10;Re add commons library">
+      <created>1575655652033</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575655652033</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Driver: mh16455 Navigator: gd17301&#10;Ticket #77&#10;Add FileBrowser which allows you to open exported videos&#10;Add an option to BottomPanel to open VideoTracker">
+      <created>1575897458032</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1575897458032</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bug whenever I am calling the resize function in ResizeResolutionImage class" />
+    <MESSAGE value="changed code to resize. Not applied to any image at the moment" />
+    <MESSAGE value="resize method working. It changes the size of the image and stores it into the same folder (overwrite the original screenshot image)&#10;Driver: bo17860  Navigator:bo17860" />
+    <MESSAGE value="the code actually changes the resolution and retrieves the values from the selected dropdown in the GUI, but it is not merged with the actual GUI package. It does not work when run the frame&#10;&#10;-bo17860" />
+    <MESSAGE value="added TextLog class&#10;&#10;driver: bo17860 navigator:ifolor" />
+    <MESSAGE value="changed couple variables names" />
+    <MESSAGE value="add image analysis folder" />
+    <MESSAGE value="implemented created text log function. it will create and write the video log information. The text file will be saved in a folder called TextLogDirectory&#10;&#10;&#10;driver: bo17860 navigator: ifolor" />
+    <MESSAGE value="added createContent function: this function should get the text content for each text log file&#10;&#10;driver: bo17860 navigator: ifolor" />
+    <MESSAGE value="changed scope of returnOpenWindows(), from private to protected; It would allow TextLog class to use the function&#10;driver: bo17860 navigator: ifolor" />
+    <MESSAGE value="createContent function changed to print out the content of the windowlog&#10;driver: bo17860 navigator: ifolor" />
+    <MESSAGE value="completed createContent function, which will orint out the applications running at the current time, the name of the videoLog and the time spent.&#10;The name of the videoLog is hard coded, It should take the name of the video just exported.&#10;&#10;driver: bo17860 navigator: ifolor" />
+    <MESSAGE value="Pushed code (again, since it was reverted) for creating an image from a text input. In addition to some code in ScreenshotMain for getting the dissimilarity threshold from the current screenshot and the previous one. &#10;This work is under ticket #46." />
+    <MESSAGE value="Code for displaying a message in the video upon changing the application is almost done. There is an error however in ScreenshotMain when trying to get the dissimilarity of 2 images.&#10;This work is under ticket #46." />
+    <MESSAGE value="The video now displays a message to the user whenever they change the applications (depending on the percentage difference from the dissimilarity threshold) .&#10;This work is under ticket #46." />
+    <MESSAGE value="Navigator: mh16455 Driver: gd17301&#10;Add commons-lang3-3.9.jar library&#10;recommit some work from previous commit 193 due to ka16693 deleting other peoples work" />
+    <MESSAGE value="Navigator: mh16455 Driver: gd17301&#10;Add json Library&#10;Add Tracker back to BottomPanel to track video export locations" />
+    <MESSAGE value="Navigator: mh16455 Driver: gd17301&#10;Fix playbackDelete panel not showing up after first recording&#10;Re add commons library" />
+    <MESSAGE value="Driver: mh16455 Navigator: gd17301&#10;Ticket #77&#10;Add FileBrowser which allows you to open exported videos&#10;Add an option to BottomPanel to open VideoTracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Driver: mh16455 Navigator: gd17301&#10;Ticket #77&#10;Add FileBrowser which allows you to open exported videos&#10;Add an option to BottomPanel to open VideoTracker" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="773" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1575895500725">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="773" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575895500725" />
+    <state x="812" y="436" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575648477503">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="812" y="436" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575648477503" />
+    <state x="213" y="133" key="CommitChangelistDialog2" timestamp="1575897454180">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="213" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575897454180" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom" timestamp="1575899433119">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895313" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433119" />
+    <state width="1878" height="306" key="GridCell.Tab.0.bottom/0.23.1920.1003@0.23.1920.1003" timestamp="1575742727807" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center" timestamp="1575899433116">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.center/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895311" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433116" />
+    <state width="1878" height="306" key="GridCell.Tab.0.center/0.23.1920.1003@0.23.1920.1003" timestamp="1575742727806" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left" timestamp="1575899433114">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.left/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895310" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433114" />
+    <state width="1878" height="306" key="GridCell.Tab.0.left/0.23.1920.1003@0.23.1920.1003" timestamp="1575742727805" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right" timestamp="1575899433119">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.right/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895312" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433119" />
+    <state width="1878" height="306" key="GridCell.Tab.0.right/0.23.1920.1003@0.23.1920.1003" timestamp="1575742727807" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1575899433122">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895316" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433122" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center" timestamp="1575899433120">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.center/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895314" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433120" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left" timestamp="1575899433120">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.left/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895314" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433120" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right" timestamp="1575899433121">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.right/-1024.23.1024.745/0.23.1920.1003@0.23.1920.1003" timestamp="1575819895315" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575899433121" />
+    <state x="676" y="263" key="MultipleFileMergeDialog" timestamp="1575895029068">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="676" y="263" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575895029068" />
+    <state x="469" y="179" key="SettingsEditor" timestamp="1575655554552">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1575655554552" />
+    <state x="707" y="498" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575649146184">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="707" y="498" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1080@0.0.1920.1080" timestamp="1575649146184" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Frame.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/MiddlePanel.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

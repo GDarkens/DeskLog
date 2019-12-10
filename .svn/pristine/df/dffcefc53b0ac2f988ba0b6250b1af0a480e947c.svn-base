@@ -1,0 +1,10 @@
+package VideoCreator;
+
+public class main {
+    public static void main() throws Exception {
+        String videoFilename = ".//outputVideo.mp4";
+        String pathImages = ".//SavedScreenshots";
+        VideoCreator.generateVideoBySequenceImages(videoFilename, pathImages, "jpg");
+    }
+
+}

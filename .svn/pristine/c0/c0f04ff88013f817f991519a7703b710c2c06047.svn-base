@@ -1,0 +1,38 @@
+package Screenshot;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+public class ResizeResolutionImage {
+
+    public String pathImages;
+
+    public ResizeResolutionImage(String pathImages) {
+        this.pathImages = pathImages;
+    }
+
+    public static BufferedImage resize(BufferedImage img, int newW, int newH) throws IOException {
+        int w = img.getWidth();
+        int h = img.getHeight();
+        BufferedImage dimg = new BufferedImage(newW, newH, img.getType());
+        Graphics2D g = dimg.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g.drawImage(img, 0, 0, newW, newH, 0, 0, w, h, null);
+        g.dispose();
+        return dimg;
+    }
+
+    public static void main(String[] args) throws IOException{
+        BufferedImage newImage = ImageIO.read(new File(".\\src\\GUI\\images\\grapefruit-slice-332-332.jpg"));
+        BufferedImage resizedImage;
+        resizedImage = resize(newImage, 740, 480);
+        //System.out.println(resizedImage.toString());
+
+    }
+}
+
+
+
+

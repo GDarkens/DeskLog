@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89f17a29-95c1-45dc-b0ef-46d01c301fc4" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TTSuqsjwwZ8SJPsZjHUxxV2HIu" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../trunk/CE320-07 Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.JUnitTesting.testSaveScreenshotWrongDir">
+    <configuration name="JUnitTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bl16855" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTesting" />
+      <option name="MAIN_CLASS_NAME" value="UnitTesting.JUnitTesting" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitTesting.testDateFormatter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bl16855" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTesting" />
+      <option name="MAIN_CLASS_NAME" value="UnitTesting.JUnitTesting" />
+      <option name="METHOD_NAME" value="testDateFormatter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitTesting.testIncorrectFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bl16855" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTesting" />
+      <option name="MAIN_CLASS_NAME" value="UnitTesting.JUnitTesting" />
+      <option name="METHOD_NAME" value="testIncorrectFormat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitTesting.testSaveScreenshotWrongDir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bl16855" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTesting" />
+      <option name="MAIN_CLASS_NAME" value="UnitTesting.JUnitTesting" />
+      <option name="METHOD_NAME" value="testSaveScreenshotWrongDir" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JUnitTesting.testSaveScreenshotWrongDir" />
+        <item itemvalue="JUnit.JUnitTesting" />
+        <item itemvalue="JUnit.JUnitTesting.testIncorrectFormat" />
+        <item itemvalue="JUnit.JUnitTesting.testDateFormatter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89f17a29-95c1-45dc-b0ef-46d01c301fc4" name="Default Changelist" comment="" />
+      <created>1573482818031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573482818031</updated>
+      <workItem from="1573482827431" duration="4850000" />
+      <workItem from="1573565250959" duration="528000" />
+      <workItem from="1573565805645" duration="12000" />
+      <workItem from="1573565870370" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

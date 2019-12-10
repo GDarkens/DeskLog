@@ -1,0 +1,141 @@
+package tests;
+import Screenshot.ImageDissimilarity;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.*;
+import javax.imageio.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.*;
+import java.text.*;
+import java.util.*;
+
+import static Screenshot.ImageDissimilarity.getDifferencePercent;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+
+public class JUnitTesting {
+
+    final static String SCREENSHOT_SAVE_LOCATION = ".//SavedScreenshots//";
+    final static Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy.MM.dd'_'HH.mm.ss");
+    Date currentDate = new Date();
+    Font font = new Font("Arial Black", Font.BOLD, 30);
+    BufferedImage img1;
+    BufferedImage img2;
+
+    {
+        try {
+            img1 = ImageIO.read(new File(".\\SavedScreenshots\\2019.11.25_14.55.18.jpg"));
+            img2 = ImageIO.read(new File(".\\SavedScreenshots\\2019.11.25_14.55.23.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void main(String[] args) throws ParseException, IOException {
+        //testIncorrectFormat();
+        //testDateFormatter();
+        //testSaveScreenshotDir();
+        //assertEqual();
+        testGetDifferencePercent();
+    }
+
+
+    public void afterImage() {
+        try {
+            Image img = ImageIO.read(new File(SCREENSHOT_SAVE_LOCATION +
+                    dateFormatter.format(currentDate) +
+                    ".jpg"));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void loadBeforeImage() {
+        try {
+            Image img = ImageIO.read(new File(SCREENSHOT_SAVE_LOCATION + ".jpg"));
+            System.out.println(img);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+
+    @Test //This test is to test whether the correct date passes the test successfully
+    public void testDateFormatter() {
+        try {
+            String testDate = "2019.11.11_21.34.01";
+            Date date = dateFormatter.parse(testDate);
+            dateFormatter.format(date);
+            System.out.println(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test //This test is to test whether an error appears if the date is written incorrectly
+    public void testIncorrectFormat() {
+        try {
+            String testDate = "11.11.2019";
+            Date date = dateFormatter.parse(testDate);
+            dateFormatter.format(testDate);
+            System.out.println(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testSaveScreenshotDir() {
+        Date currentDate = new Date();
+        try {
+            Robot screenshotRobot = new Robot();
+            BufferedImage screenshot = screenshotRobot.createScreenCapture(new Rectangle(SCREEN_SIZE));
+
+            //Check if the directory exists, if not create it
+
+            ImageIO.write(screenshot, "JPG", new File(SCREENSHOT_SAVE_LOCATION +
+                    dateFormatter.format(currentDate) +
+                    ".jpg"));
+
+        } catch (AWTException | IOException e) {
+            System.out.println("Failed to take and save screenshot \n" +
+                    "Stack trace: " + e);
+        }
+    }
+
+    @Test //Tests that the two files being tested are the 'same'
+    public void assertEqual() throws IOException {
+        BufferedImage originalImage = ImageIO.read(new File(SCREENSHOT_SAVE_LOCATION + ".jpg"));
+        BufferedImage afterImage = ImageIO.read(new File(SCREENSHOT_SAVE_LOCATION +
+                dateFormatter.format(currentDate) +
+                ".jpg"));
+        assert1Equals(originalImage, afterImage);
+    }
+
+    @Test
+    private boolean assert1Equals(BufferedImage originalImage, BufferedImage afterImage) {
+        if (originalImage == afterImage) {
+            System.out.println("hi");
+            return true;
+        }
+        return false;
+    }
+
+    @Test // test to see whether two image sizes are equal in pixel size
+    public void testGetDifferencePercent() throws IOException {
+        assertEquals(getDifferencePercent(img1, img2), 12.984627032397322, 0);
+    }
+
+    @Test // test that wrong answer is expected from pixel sizes
+    public void testGetDifferencePercentWrong() throws IOException {
+        double expectedValue = 0.0033333333333;
+        double getResult = getDifferencePercent(img1, img2);
+        boolean wrongAnswer = expectedValue == getResult;
+        assertFalse(wrongAnswer);
+        
+    }
+
+
+
+}

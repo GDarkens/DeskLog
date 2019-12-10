@@ -1,0 +1,83 @@
+package Screenshot;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static javax.imageio.ImageIO.read;
+
+
+public class ScreenshotMain {
+    public static void main(String[] args) {
+        screenshotHandler(SCREENSHOT_SAVE_LOCATION);
+    }
+
+    static String SCREENSHOT_SAVE_LOCATION;
+    private final static Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    private static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy.MM.dd'_'HH.mm.ss");
+    private static String fileNameLocation;
+    public static String selectedRes = "1920*1080p: 16:9";
+
+
+    public static void screenshotHandler(String screenshotLocation) {
+        SCREENSHOT_SAVE_LOCATION = screenshotLocation + "/SavedScreenshots/";
+        Date currentDate = new Date();
+
+        try {
+            Robot screenshotRobot = new Robot();
+            BufferedImage screenshot = screenshotRobot.createScreenCapture(new Rectangle(SCREEN_SIZE));
+
+            File directory = new File(SCREENSHOT_SAVE_LOCATION);
+            if (!directory.exists()) directory.mkdir();
+
+            fileNameLocation = SCREENSHOT_SAVE_LOCATION + dateFormatter.format(currentDate) + ".jpg";
+
+            ImageIO.write(screenshot, "JPG", new File(SCREENSHOT_SAVE_LOCATION +
+                    dateFormatter.format(currentDate) + ".jpg"));
+
+        } catch (AWTException | IOException e) {
+            System.out.println("Failed to take and save screenshot \n" + "Stack trace: " + e);
+        }
+        resizeHandler();
+        timestampHandler();
+    }
+
+
+    private static void resizeHandler() {
+        String[] temp;
+        String[] widthHeight;
+        try {
+            int width, height;
+
+            ResizeResolutionImage resizedImage = new ResizeResolutionImage();
+            BufferedImage selectedScreenshot = read(new File(fileNameLocation));
+
+            widthHeight = selectedRes.split(":");
+
+            temp = widthHeight[0].split("\\*");
+            width = Integer.parseInt(temp[0]);
+            height = Integer.parseInt(temp[1].replace("p", ""));
+
+            ImageIcon s = new ImageIcon(resizedImage.resizeImage(selectedScreenshot, fileNameLocation, width, height));
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage() + "\nFailed to resize the image");
+        }
+    }
+
+    private static void timestampHandler(){
+        try {
+            imageManipulation.timestamp(new File(fileNameLocation), new Font("Arial Black", Font.BOLD, 30), SCREENSHOT_SAVE_LOCATION);
+
+
+        } catch (IOException e) {
+            System.out.println("Failed to timestamp screenshot \n" +
+                    "Stack trace:" + e);
+        }
+    }
+}

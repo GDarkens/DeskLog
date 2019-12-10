@@ -1,0 +1,58 @@
+package Screenshot;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLOutput;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+public class main{
+    public static void main(String[] args) {
+        //A portion of this code will be changed when we link together other modules for iteration 1
+        takeAndSaveScreenshot();
+    }
+
+    final static String SCREENSHOT_SAVE_LOCATION = ".//SavedScreenshots//";
+    final static Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy.MM.dd'_'HH.mm.ss");
+    public static String fileNameLocation;
+
+
+    public static void takeAndSaveScreenshot() {
+        Date currentDate = new Date();
+        try {
+            Robot screenshotRobot = new Robot();
+            BufferedImage screenshot = screenshotRobot.createScreenCapture(new Rectangle(SCREEN_SIZE));
+
+            //Check if the directory exists, if not create it
+            File directory = new File(SCREENSHOT_SAVE_LOCATION);
+            if (!directory.exists()){
+                directory.mkdir();
+            }
+
+            fileNameLocation = SCREENSHOT_SAVE_LOCATION + dateFormatter.format(currentDate) + ".jpg";
+
+            ImageIO.write(screenshot, "JPG", new File(SCREENSHOT_SAVE_LOCATION +
+                    dateFormatter.format(currentDate) +
+                    ".jpg"));
+
+
+        }catch (AWTException | IOException e){
+            System.out.println("Failed to take and save screenshot \n" +
+                    "Stack trace: " + e);
+        }
+
+        //Pass screenshot to timestamping module
+        try{
+            imageManipulation.timestamp( new File(fileNameLocation), new Font("Arial Black", Font.BOLD, 30), SCREENSHOT_SAVE_LOCATION);
+        }catch(IOException e){
+            System.out.println("Failed to timestamp screenshot \n" +
+                    "Stack trace:" + e);
+        }
+    }
+}
+

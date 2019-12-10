@@ -1,0 +1,29 @@
+package FrameRate;
+
+import java.io.File;
+import java.io.IOException;
+
+
+public class main{
+
+    public static void main(String[] args){
+
+        File source = new File ("E:\\");
+        File destination = new File ("E:\\");
+
+        try { compression.compress(source, destination); }
+        catch (IOException e) { System.out.println(e);}
+
+
+        File source2 = new File ("E:\\");
+        File destination2 = new File ("E:\\");
+
+        try { compression.uncompress(source2, destination2);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+}

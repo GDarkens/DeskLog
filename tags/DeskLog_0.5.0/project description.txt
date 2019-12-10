@@ -1,0 +1,30 @@
+DeskLog: An application that produces a video log of your computer
+desktop
+
+
+The Project:
+Many people spend a large part of their day working at the computer.
+It would be beneficial to be able to review how the time was spent.
+For instance, some people work on different projects or for different
+clients at different times, and need to bill based on time spent on such
+projects/clients.
+Also, we are all a bit addicted to Web browsing, Facebook, etc. and we
+might want to know what proportion of the day we devoted to this so
+that we can learn to control ourselves.
+In this project you will develop a video logging application that takes
+desktop snapshots at regular intervals, adds a time stamp, saves them
+and finally produces a video log.
+
+
+Users will be able to choose the frame rate, the resolution of the video
+and a dissimilarity threshold.
+The dissimilarity threshold will be used to automatically detect changes
+in the applications open on the desktop, which might correspond to
+changes in activity.
+The application will compare consecutive frames to see if they are
+above the threshold. If they are, it will split the video log for easier
+identification of activities.
+If time permits, some simple form of image analysis (template
+matching) will be used to identify the type of application open at any
+given time (e.g., Word, Excel, Google Chrome, ....) and a textual log
+containing this information will be saved, too.

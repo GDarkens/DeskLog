@@ -1,0 +1,59 @@
+package windowLog;
+
+import VideoCreator.VideoCreator;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+
+
+public class TextLog {
+    String applicationInfo, timeSpent, videoLogName = "video_03_11";
+
+    public TextLog(){
+//        this.applicationInfo = application;
+//        this.timeSpent = timeSpent;
+//        this.videoLogName = videoLogName;
+
+    }
+
+    //name of the file should be the same as the one of the video log
+    public String createDateFormatDoc(){
+       StringBuilder filename = new StringBuilder();
+       filename.append("textLog").append(videoLogName).append(".txt");
+
+       return filename.toString();
+    }
+
+    public String createContent(){
+        String content;
+
+        List<windowLogger.WindowInfo> applicationContent = windowLogger.returnOpenWindows();
+        content = "Video Log: " + this.videoLogName + "\nApplication(s) in use: " + applicationContent +"\nTime spent on application: "+ this.timeSpent+";";
+
+        return content;
+
+    }
+
+    public void createTextLog() throws IOException {
+        String textLogDetails = createContent();
+        String filename = createDateFormatDoc();
+        BufferedWriter writeFile = new BufferedWriter(new FileWriter(".\\TextLogDirectory\\"+filename));
+        writeFile.write(textLogDetails);
+        writeFile.close();
+
+    }
+    public static void main(String args[]){
+        TextLog t = new TextLog();
+        try {
+            t.createTextLog();
+        }catch(Exception e){
+            System.out.println(e.getMessage() + "\nImpossible to open the file!");
+        }
+
+
+    }
+
+}

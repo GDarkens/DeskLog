@@ -1,0 +1,33 @@
+package Screenshot;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+
+
+public class ResizeResolutionImage{
+
+
+    public ResizeResolutionImage() {
+
+    }
+
+
+    public static Image resizeImage(Image screenshotImage, String outputImageSource, int newWidth, int newHeight) throws IOException {
+        BufferedImage resizeImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
+
+        Graphics2D graphic = resizeImage.createGraphics();
+        graphic.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        graphic.drawImage(screenshotImage, 0, 0, newWidth, newHeight, null);
+        graphic.dispose();
+        System.out.println(newWidth + ", " + newHeight);
+        ImageIO.write(resizeImage, "jpg", new File(outputImageSource));
+        return resizeImage;
+    }
+}
+
+

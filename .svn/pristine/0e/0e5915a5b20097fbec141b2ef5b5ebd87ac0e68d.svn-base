@@ -1,0 +1,115 @@
+package GUI;
+
+import VideoLogTracker.Tracker;
+import org.json.JSONArray;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.Set;
+
+public class FileBrowser extends JFrame {
+    private JTable jTable_Files_Name;
+    private Tracker tracker = new Tracker("VideoLocations.json");
+
+
+    FileBrowser()
+    {
+        initComponents();
+        this.setVisible(true);
+    }
+
+    private void initComponents() {
+
+        JScrollPane jScrollPane1 = new JScrollPane();
+        jTable_Files_Name = new JTable();
+
+        jTable_Files_Name.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [][] {
+
+                },
+                new String [] {
+                        "Title 1", "Title 2", "Title 3", "Title 4"
+                }
+
+        ){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        });
+        jScrollPane1.setViewportView(jTable_Files_Name);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(15, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1)
+                                .addContainerGap())
+        );
+        pack();
+        addTrackerInfo();
+
+        jTable_Files_Name.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2)
+                {
+                    JTable target = (JTable) e.getSource();
+                    int location = target.getSelectedRow();
+                    String file_location = (String) jTable_Files_Name.getModel().getValueAt(location, 0);
+                    String file_name = (String) jTable_Files_Name.getModel().getValueAt(location, 1);
+                    try {
+                        System.out.println(file_location + file_name);
+                        Desktop.getDesktop().open(new File(file_location + file_name));
+                    } catch (IOException ex) {
+                        System.out.println("File may have been moved or deleted!");
+                    }
+                }
+            }
+        });
+    }
+
+    private void addTrackerInfo() {
+        Set<String> locations = tracker.getFilenames();
+        JSONArray filenames;
+        DefaultTableModel model = (DefaultTableModel) jTable_Files_Name.getModel();
+
+        model.setColumnIdentifiers(new String[]{"Location", "File"});
+
+        Object[] row = new Object[2];
+
+        for (String location : locations) {
+            filenames = tracker.getLocations(location);
+            for(Object filename: filenames.toList()) {
+                row[0] = location;
+                row[1] = filename.toString();
+                model.addRow(row);
+            }
+        }
+    }
+
+
+    public static void main(String args[]) {
+
+        new FileBrowser().setVisible(true);
+
+    }
+
+}
+

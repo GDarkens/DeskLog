@@ -1,0 +1,25 @@
+package Screenshot;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+public class ResizeResolutionImage {
+    public String pathImages = ".//SavedScreenshots";
+    public static void resizeImage(Integer width, Integer height, File source_image, String pathImages)throws IOException {
+        Integer scale_width, scale_height;
+        scale_width = width;
+        scale_height = height;
+        BufferedImage inputImage = ImageIO.read(source_image);
+//        BufferedImage outputImage = new BufferedImage(scale_width, scale_height, inputImage.getType());
+//
+//        Graphics2D graphic = outputImage.createGraphics();
+//        graphic.drawImage((outputImage, 0, 0 , scale_width, scale_height, null);
+        Image newImage = inputImage.getScaledInstance(scale_width, scale_height, Image.SCALE_DEFAULT);
+        //ImageIO.write(newImage, "jpg", new File((pathImages + source_image.getName())));
+    }
+    public static void resolution(){
+
+    }
+}

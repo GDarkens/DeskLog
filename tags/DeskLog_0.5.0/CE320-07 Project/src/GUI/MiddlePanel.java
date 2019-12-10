@@ -1,0 +1,144 @@
+package GUI;
+
+import Screenshot.ScreenshotM;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class MiddlePanel extends JPanel {
+    private JLabel frameRateLabel;
+    private JLabel videoResLabel;
+    private JLabel dThresholdLabel;
+    private JSlider frameRateSlider;
+    private JLabel rateAxisLabel;
+    private JComboBox videoRes;
+    private JComboBox dThreshold;
+
+
+    private GridBagConstraints gbcMiddle = new GridBagConstraints();
+    private List<ResList> resStringsN = new ArrayList<ResList>();
+    private String[] resStrings = {"1920*1080p: 16:9", "1280*720p: 16:9", "720*480p: 16:9"}; // ~ka16693 will do file input for this and retrieve from CSV file.
+    private String[] threshStrings = {"Threshold 1", "Threshold 2", "Threshold 3", "Threshold 4"};
+    public String selectedResolution;
+
+    public MiddlePanel() {
+        setLayout(new GridBagLayout());
+
+        frameRateLabel = new JLabel("Image frequency: ");
+        videoResLabel = new JLabel("Video Resolution: ");
+
+        videoRes = new JComboBox(resStrings);
+        videoRes.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                selectedImage(e);
+            }
+        });
+
+        dThresholdLabel = new JLabel("Dissimilarity Threshold: ");
+        dThreshold = new JComboBox(threshStrings);
+
+        middleLayout(); //The grid bag layout has now been made into a new method ~ ka16693
+        style();
+    }
+
+    public void selectedImage(ActionEvent e) {
+        if (videoRes.getSelectedItem() != null) {
+            selectedResolution = videoRes.getSelectedItem().toString();
+            ScreenshotM.selectedRes = selectedResolution;
+        }
+    }
+
+    private void style() {
+        setBackground(new Color(255, 255, 255));
+        Font label = new Font("Century Gothic", Font.PLAIN, 14);
+        Font labelS = new Font("Century Gothic", Font.PLAIN, 11);
+        frameRateLabel.setFont(label);
+        videoResLabel.setFont(label);
+        dThresholdLabel.setFont(label);
+        rateAxisLabel.setFont(label);
+        videoRes.setBackground(Color.WHITE);
+        dThreshold.setBackground(Color.WHITE);
+        frameRateSlider.setBackground(Color.WHITE);
+        videoRes.setFont(labelS);
+        dThreshold.setFont(labelS);
+        frameRateSlider.setFont(labelS);
+    }
+
+    private void middleLayout() {
+
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 0;
+        add(frameRateLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 0;
+        createSlider();
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 1;
+        add(videoResLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 1;
+        add(videoRes, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 2;
+        add(dThresholdLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 2;
+        add(dThreshold, gbcMiddle);
+    }
+
+    private void createSlider() {
+        frameRateSlider = new JSlider(JSlider.HORIZONTAL, 1, 20, 1);
+        frameRateSlider.setMajorTickSpacing(1);
+        frameRateSlider.setPaintTicks(true);
+        add(frameRateSlider);
+
+        rateAxisLabel = new JLabel("  Every " + frameRateSlider.getValue() * 5 + " seconds");
+
+        add(rateAxisLabel);
+
+        event e = new event();
+        frameRateSlider.addChangeListener(e);
+    }
+
+    private void readFile() {
+        String FName = "src/GUI/files/resF.csv";
+        File file = new File(FName);
+        Scanner read = null;
+        try {
+            read = new Scanner(file);
+            resStringsN.clear();
+            read.nextLine();
+            while (read.hasNextLine()) {
+                String line = read.nextLine();
+                String[] lineF = line.split(",");
+                String resD = lineF[0];
+                String ratioD = lineF[1];
+                ResList obj = new ResList(resD, ratioD);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    class event implements ChangeListener {
+        @Override
+        public void stateChanged(ChangeEvent e) {
+            int sliderValue = frameRateSlider.getValue();
+
+            rateAxisLabel.setText("  Every " + sliderValue * 5 + " second(s)");
+
+            BottomPanel.setFrameRateInMilliseconds((sliderValue * 5) * 1000);
+        }
+    }
+}

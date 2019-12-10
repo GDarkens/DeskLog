@@ -1,0 +1,2 @@
+Video Log: 2019.12.09_20.56.46
+Application(s) in use: [Desklog, CE320-07 Project [C:\Users\gdark\Desktop\CE320\trunk\CE320-07 Project] - ...\src\Screenshot\ScreenshotMain.java [CE320-07 Project] - IntelliJ IDEA, TweetDeck - Google Chrome, @Grimpus - Discord, Spotify Premium, Microsoft Text Input Application, Malwarebytes Tray Application, NVIDIA GeForce Overlay, Program Manager]

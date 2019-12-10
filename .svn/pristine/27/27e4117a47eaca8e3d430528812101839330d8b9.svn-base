@@ -1,0 +1,221 @@
+package GUI;
+
+import Screenshot.ScreenshotMain;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import javax.swing.ButtonGroup;
+
+public class MiddlePanel extends JPanel{
+    private JLabel frameRateLabel;
+    private JLabel videoResLabel;
+    private JLabel dThresholdLabel;
+    public static JSlider frameRateSlider;
+    private JLabel rateAxisLabel;
+    private JComboBox videoRes;
+    private JComboBox dThreshold;
+    private JLabel saveDefaultLocation;
+    private JLabel turnOnthreshold;
+    private JLabel saveToDesktop;
+    private JRadioButton saveDefault;
+    private JRadioButton saveToDesktopRadio;
+    public JCheckBox turnOnthresholdRadio;
+    private JLabel openFileBrowserLabel;
+    private JButton openFileBrowserBtn;
+    public int thresholdValue;
+
+
+
+
+    private GridBagConstraints gbcMiddle = new GridBagConstraints();
+    private List<ResList> resStringsN = new ArrayList<ResList>();
+    private String[] resStrings = {"1920*1080p: 16:9", "1280*720p: 16:9", "720*480p: 16:9"}; // ~ka16693 will do file input for this and retrieve from CSV file.
+    private String[] threshStrings = {"10% difference", "20% difference", "30% difference", "40% difference"};
+    public String selectedResolution;
+
+    public MiddlePanel() {
+        setLayout(new GridBagLayout());
+
+        frameRateLabel = new JLabel("Image frequency: ");
+        videoResLabel = new JLabel("Video Resolution: ");
+
+        videoRes = new JComboBox(resStrings);
+        videoRes.addActionListener(e -> selectedImage());
+
+        dThresholdLabel = new JLabel("Dissimilarity Threshold: ");
+        dThreshold = new JComboBox(threshStrings);
+        dThreshold.setEnabled(false); //Disabled by default
+        thresholdValue = 10;
+        dThreshold.addActionListener(e -> {
+            String tempHold;
+            tempHold = dThreshold.getSelectedItem().toString().substring(0,2);
+            thresholdValue = Integer.parseInt(tempHold);
+        });
+
+        turnOnthreshold = new JLabel("Turn on dissimilarity threshold: ");
+        turnOnthresholdRadio = new JCheckBox();
+        turnOnthresholdRadio.addChangeListener(e -> {
+            if(turnOnthresholdRadio.isSelected()){
+                dThreshold.setEnabled(true);
+            }else{
+                dThreshold.setEnabled(false);
+            }
+        });
+
+
+        saveDefaultLocation = new JLabel("Save to default location: ");
+        saveDefault = new JRadioButton();
+        saveDefault.setSelected(true);
+        saveDefault.addChangeListener(e -> {
+            if(!saveDefault.isSelected()) BottomPanel.setIsDefaultSaveLocation(false);
+            else BottomPanel.setIsDefaultSaveLocation(true);
+        });
+
+        saveToDesktop = new JLabel("Save to Desktop: ");
+        saveToDesktopRadio = new JRadioButton();
+        saveToDesktopRadio.addChangeListener(e -> {
+            if(!saveToDesktopRadio.isSelected()) {
+                BottomPanel.saveToDesktop(false);
+            }
+            else {
+                BottomPanel.saveToDesktop(true);
+            }
+        });
+        ButtonGroup group = new ButtonGroup();
+        group.add(saveDefault);
+        group.add(saveToDesktopRadio);
+        openFileBrowserLabel = new JLabel("Open the Video Explorer: ");
+        openFileBrowserBtn = new JButton("Video Explorer");
+        openFileBrowserBtn.addActionListener(e -> new FileBrowser());
+
+        middleLayout(); //The grid bag layout has now been made into a new method ~ ka16693
+        style();
+
+
+    }
+
+    private void selectedImage() {
+        if (videoRes.getSelectedItem() != null) {
+            selectedResolution = videoRes.getSelectedItem().toString();
+            ScreenshotMain.selectedRes = selectedResolution;
+        }
+    }
+
+    private void style() {
+        setBackground(new Color(255, 255, 255));
+        Font label = new Font("Century Gothic", Font.PLAIN, 14);
+        Font labelS = new Font("Century Gothic", Font.PLAIN, 11);
+        frameRateLabel.setFont(label);
+        videoResLabel.setFont(label);
+        openFileBrowserLabel.setFont(label);
+        dThresholdLabel.setFont(label);
+        turnOnthreshold.setFont(label);
+        saveDefaultLocation.setFont(label);
+        rateAxisLabel.setFont(label);
+        saveDefaultLocation.setFont(label);
+        saveToDesktop.setFont(label);
+        videoRes.setBackground(Color.WHITE);
+        saveDefault.setBackground(Color.WHITE);
+        dThreshold.setBackground(Color.WHITE);
+        frameRateSlider.setBackground(Color.WHITE);
+        turnOnthresholdRadio.setBackground(Color.WHITE);
+        saveToDesktopRadio.setBackground(Color.WHITE);
+        videoRes.setFont(labelS);
+        dThreshold.setFont(labelS);
+        frameRateSlider.setFont(labelS);
+    }
+
+    private void middleLayout() {
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 0;
+        add(openFileBrowserLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 0;
+        add(openFileBrowserBtn, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 1;
+        add(frameRateLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 1;
+        createSlider(gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 2;
+        add(videoResLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 2;
+        add(videoRes, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 3;
+        add(dThresholdLabel, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 3;
+        add(dThreshold, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 4;
+        add(saveDefaultLocation, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 4;
+        add(saveDefault, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 5;
+        add(saveToDesktop, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 5;
+        add(saveToDesktopRadio, gbcMiddle);
+        gbcMiddle.gridx = 0;
+        gbcMiddle.gridy = 7;
+        add(turnOnthreshold, gbcMiddle);
+        gbcMiddle.gridx = 1;
+        gbcMiddle.gridy = 7;
+        add(turnOnthresholdRadio,gbcMiddle);
+    }
+
+    private void createSlider(GridBagConstraints gbcMiddle) {
+        frameRateSlider = new JSlider(JSlider.HORIZONTAL, 1, 20, 1);
+        frameRateSlider.setMajorTickSpacing(1);
+        frameRateSlider.setPaintTicks(true);
+        add(frameRateSlider, gbcMiddle);
+
+        rateAxisLabel = new JLabel("  Every " + frameRateSlider.getValue() * 5 + " seconds");
+
+        gbcMiddle.gridy = 1;
+        gbcMiddle.gridx = 2;
+        add(rateAxisLabel, gbcMiddle);
+
+
+        frameRateSlider.addChangeListener(e -> {
+            int sliderValue = frameRateSlider.getValue();
+            rateAxisLabel.setText("  Every " + sliderValue * 5 + " second(s)");
+            BottomPanel.setFrameRateInMilliseconds((sliderValue * 5) * 1000);
+        });
+    }
+
+    private void readFile() {
+        String FName = "src/GUI/files/resF.csv";
+        File file = new File(FName);
+        Scanner read = null;
+        try {
+            read = new Scanner(file);
+            resStringsN.clear();
+            read.nextLine();
+            while (read.hasNextLine()) {
+                String line = read.nextLine();
+                String[] lineF = line.split(",");
+                String resD = lineF[0];
+                String ratioD = lineF[1];
+                ResList obj = new ResList(resD, ratioD);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}

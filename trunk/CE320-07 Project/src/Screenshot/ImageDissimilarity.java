@@ -1,0 +1,56 @@
+package Screenshot;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+public class ImageDissimilarity {
+
+
+    public static void main(String[] args) throws IOException {
+        BufferedImage img1 = ImageIO.read(new File(".\\SavedScreenshots\\2019.11.25_14.55.18.jpg"));
+        BufferedImage img2 = ImageIO.read(new File(".\\SavedScreenshots\\2019.11.25_14.55.23.jpg"));
+        //File paths need to be fixed when code is refactored
+        //Also needs updating when Dissimilarity Threshold has been decided
+        double differencePercent = getDifferencePercent(img1, img2);
+        System.out.println("difference percentage: " + differencePercent);
+    }
+
+    public static double getDifferencePercent(BufferedImage compareImage1, BufferedImage compareImage2) {
+        int image1Width = compareImage1.getWidth();
+        int image1Height = compareImage1.getHeight();
+        int image2Width = compareImage2.getWidth();
+        int image2Height = compareImage2.getHeight();
+        if (checkImageDifference(image1Width, image1Height, image2Width, image2Height) == false) {
+            throw new IllegalArgumentException(String.format("Images must have the same dimensions: (%d,%d) vs. (%d,%d)", image1Width, image1Height, image2Width, image2Height));
+        }
+        long difference = 0;
+        for (int yPixels = 0; yPixels < image1Height; yPixels++) {
+            for (int xPixels = 0; xPixels < image1Width; xPixels++) {
+                difference += pixelDifference(compareImage1.getRGB(xPixels, yPixels), compareImage2.getRGB(xPixels, yPixels));
+            }
+        }
+        long maxDifference = 3L * 255 * image1Width * image1Height;
+        return 100.0 * difference / maxDifference;
+    }
+
+    private static int pixelDifference(int rgb1, int rgb2) {
+        int redImg1 = (rgb1 >> 16) & 0xff;
+        int greenImg1 = (rgb1 >>  8) & 0xff;
+        int blueImg1 =  rgb1        & 0xff;
+        int redImg2 = (rgb2 >> 16) & 0xff;
+        int greenImg2 = (rgb2 >>  8) & 0xff;
+        int blueImg2 =  rgb2        & 0xff;
+        return Math.abs(redImg1 - redImg2) + Math.abs(greenImg1 - greenImg2) + Math.abs(blueImg1 - blueImg2);
+    }
+
+    private static boolean checkImageDifference(int image1Width, int image1Height, int image2Width, int image2Height){
+        if (image1Width != image2Width){
+            if (image1Height != image2Height){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+

@@ -1,0 +1,52 @@
+package FrameRate;
+
+import java.io.*;
+import java.util.zip.Deflater;
+import java.util.zip.DeflaterOutputStream;
+import java.util.zip.InflaterInputStream;
+
+public class compression {
+    private static File o;
+
+    public static void compress(File s, File d) throws IOException {     //file source and destination
+        //Assign the original file 's' to FIS for reading data
+        FileInputStream fis = new FileInputStream (s);
+
+        //Assign compressed file 'o' to FOS
+        FileOutputStream fos = new FileOutputStream (d);
+
+        //Assign FileOutputStream to DOS
+        DeflaterOutputStream dos = new DeflaterOutputStream(fos);
+
+        //read data from FIS and write it into DOS
+        int data;
+        while ((data = fis.read()) != -1) { dos.write(data); }
+
+        fis.close();
+        dos.close();
+    }
+
+    public static void uncompress(File s, File d) throws IOException {
+        //assign Input File 's' to FIS for reading data
+        FileInputStream fis = new FileInputStream(s);
+
+        //assign output file 'o' to FOS for reading the data
+        FileOutputStream fos = new FileOutputStream(d);
+
+        //assign IIS to FIS for uncompressing the data
+        InflaterInputStream iis = new InflaterInputStream(fis);
+
+        //read data from IIS and write it into FOS
+        int data;
+        while((data = iis.read()) != -1) { fos.write(data); }
+
+        //close the files
+        fos.close();
+        iis.close();
+
+    }
+
+}
+
+
+

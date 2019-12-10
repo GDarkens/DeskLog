@@ -1,0 +1,79 @@
+package GUI;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+public class BottomPanel extends JPanel implements ActionListener {
+
+    private JButton recordButt;
+    private JButton exportButt;
+
+    BufferedImage buttonImage;
+
+
+    GridBagConstraints gbcBottom = new GridBagConstraints();
+
+    JFileChooser chooserLocation;
+    String fileChooserTitle = "Select location for video log export";
+    String videoLogLocation = "";
+
+    public BottomPanel() {
+
+
+        gridlayout();
+
+        exportButt = new JButton("Export Video log");
+        exportButt.addActionListener(this);
+
+        try {
+            buttonImage = ImageIO.read(new File("trunk/CE320-07 Project/src/GUI/images/icon.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        recordButt = new JButton(new ImageIcon(buttonImage));
+        recordButt.setBorderPainted(false);
+        recordButt.setFocusPainted(false);
+
+        gbcBottom.gridx = 0;
+        gbcBottom.gridy = 0;
+        add(recordButt, gbcBottom);
+
+        gbcBottom.gridx = 0;
+        gbcBottom.gridy = 1;
+        style();
+        add(exportButt, gbcBottom);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        chooserLocation = new JFileChooser();
+        chooserLocation.setCurrentDirectory(new java.io.File("."));
+        chooserLocation.setDialogTitle(fileChooserTitle);
+        chooserLocation.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        chooserLocation.setAcceptAllFileFilterUsed(false);
+
+        if (chooserLocation.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            videoLogLocation = chooserLocation.getSelectedFile().toString();
+            System.out.println("Selected Location: " + videoLogLocation);
+        }
+        else {
+            System.out.println("Location not selected");
+        }
+    }
+
+    private void gridlayout(){
+        setLayout(new GridBagLayout());
+    }
+
+    private void style(){
+        Font butFont = new Font("Century Gothic", Font.PLAIN,11) ;
+        setBackground(new Color(255,255,255));
+        exportButt.setFont(butFont);
+        recordButt.setFont(butFont);
+    }
+}

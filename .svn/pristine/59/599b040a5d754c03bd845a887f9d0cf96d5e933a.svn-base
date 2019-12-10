@@ -1,0 +1,156 @@
+package GUI;
+
+import VideoCreator.*;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
+
+public class BottomPanel extends JPanel implements ActionListener {
+
+    private JButton recordButt;
+    private JButton exportButt;
+
+    BufferedImage buttonImage;
+
+
+    GridBagConstraints gbcBottom = new GridBagConstraints();
+
+    JFileChooser chooserLocation;
+    String fileChooserTitle = "Select location for video log export";
+    String videoLogLocation = "";
+
+
+    private int frameRateInMilliseconds = 5000;
+    private boolean currentlyRecording = false;
+    private Timer timer = new Timer(true);
+
+    public BottomPanel() {
+
+
+        gridlayout();
+
+        exportButt = new JButton("Export Video log");
+        exportButt.addActionListener(this);
+
+        try {
+            buttonImage = ImageIO.read(new File("./src/GUI/images/icon.png"));
+            File file_image = new File(".\\src\\GUI\\images\\icon.png");
+            //buttonImage = ImageIO.read(new File(".\\src\\GUI\\images"));
+            buttonImage = ImageIO.read(file_image);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        recordButt = new JButton(new ImageIcon(buttonImage));
+        recordButt.setBorderPainted(false);
+        recordButt.setFocusPainted(false);
+        recordButt.addActionListener(this);
+
+        gbcBottom.gridx = 0;
+        gbcBottom.gridy = 0;
+        add(recordButt, gbcBottom);
+
+        gbcBottom.gridx = 0;
+        gbcBottom.gridy = 1;
+        style();
+        add(exportButt, gbcBottom);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("Export Video log")){
+
+            chooserLocation = new JFileChooser();
+            chooserLocation.setCurrentDirectory(new java.io.File("."));
+            chooserLocation.setDialogTitle(fileChooserTitle);
+            chooserLocation.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            chooserLocation.setAcceptAllFileFilterUsed(false);
+
+            if (chooserLocation.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+                videoLogLocation = chooserLocation.getSelectedFile().toString();
+                System.out.println("Selected Location: " + videoLogLocation);
+            }
+            else {
+                System.out.println("Location not selected");
+            }
+
+
+        }else{ //Code to handle hitting record button
+
+            if(!currentlyRecording){
+                timer.scheduleAtFixedRate(new recordScreenshots(), 0, frameRateInMilliseconds);
+                currentlyRecording = true;
+                return;
+            }
+            //Code below handles stopping of recording
+            currentlyRecording = false;
+            timer.cancel();
+            timer.purge();
+
+            int exportNowDialog = JOptionPane.showConfirmDialog(null,
+                    "Do you want to export your recording to video now?",
+                    "Export to video now?",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE);
+
+            if(exportNowDialog == JOptionPane.YES_OPTION){
+                try{
+
+                    String videoFilename = ".//outputVideo.mp4";
+                    String pathImages = ".//SavedScreenshots";
+                    VideoCreator.generateVideoBySequenceImages(videoFilename, pathImages, "jpg");
+
+                    File directory = new File(pathImages);
+                    deleteDir(directory);
+
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                    System.out.println("Failed to render and export video.");
+                }
+            }
+        }
+    }
+
+    class recordScreenshots extends TimerTask{
+        public void run(){
+            int missedFrames = 0;
+            try{
+                Screenshot.Main.takeAndSaveScreenshot();
+            }catch (Exception e){
+                missedFrames++;
+                System.out.println("Error taking and saving screenshot - " + missedFrames + " missed frames so far.");
+            }
+        }
+    }
+
+
+
+    private void gridlayout(){
+        setLayout(new GridBagLayout());
+    }
+
+    private void style(){
+        Font butFont = new Font("Century Gothic", Font.PLAIN,11) ;
+        setBackground(new Color(255,255,255));
+        exportButt.setFont(butFont);
+        recordButt.setFont(butFont);
+    }
+
+    void deleteDir(File file) {
+        File[] contents = file.listFiles();
+        if (contents != null) {
+            for (File f : contents) {
+                deleteDir(f);
+            }
+        }
+        file.delete();
+    }
+}
